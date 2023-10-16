@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <!-- <link rel="stylesheet" href="/src/style.css" /> -->
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="bord">
+        <div class="left">
+          <div class="card">
+            <div class="card_load"></div>
+            <div class="card_load_extreme_title"></div>
+            <div class="card_load_extreme_descripion"></div>
+          </div>
+
+          <div class="left-projects" left-list>
+            <!-- <div class="upper-line"></div>
+            <div class="pined-projects">
+              <div id="myDay" class="left-list-item">
+                <img src="/src/sun.png" alt="" /> My Day
+              </div>
+              <div id="important" class="left-list-item">
+                <img src="/src/important.png" alt="" /> Important
+              </div>
+              <div id="forMe " class="left-list-item">
+                <img src="/src/pearson.png" alt="" /> For Me
+              </div>
+            </div>
+            <div class="down-line"></div> -->
+          </div>
+          <button class="delete btn" data-delete-list-button>
+            Delete List
+          </button>
+          <form action="" data-new-list-form>
+            <button class="create btn" aria-label="create new list">+</button>
+            <input
+              type="text"
+              data-new-list-input
+              placeholder="add new project"
+              class="list-input"
+            />
+          </form>
+        </div>
+
+        <div class="right" data-list-display-container>
+          <h1 class="title" data-list-title>My Day</h1>
+          <div class="task-list" data-task></div>
+          <form action="" data-new-task-form>
+            <button class="create btn" aria-label="create new task">+</button>
+            <input
+              type="text"
+              data-new-task-input
+              placeholder="add new project"
+              class="list-input"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label> <span class="custom-checkbox"></span></label>
+      </div>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bord {
+  position: relative;
+  background: rgb(63, 251, 208);
+  background: radial-gradient(
+    circle,
+    rgba(63, 251, 208, 1) 0%,
+    rgba(82, 166, 178, 1) 100%,
+    rgba(70, 220, 252, 1) 100%
+  );
+  width: 1300px;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 20px 20px 50px #878787;
+  padding: 15px;
+  font-family: poppins;
+}
+.right {
+  height: 720px;
+  width: 950px;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 30px 30px 50px #878787;
+  margin-left: 15px;
+}
+.left {
+  color: #ffffff;
+  width: 305px;
+  height: 720px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.left img {
+  margin-right: 10px;
+}
+
+.left-projects {
+  height: 500px;
+  overflow-y: scroll;
+}
+.left-projects::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.left-list-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  background-color: #fff;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 4px;
+  padding: 10px;
+}
+.left-list-item:hover {
+  filter: brightness(90%);
+}
+
+.upper-line {
+  background-color: #fff;
+  height: 3px;
+}
+.down-line {
+  background-color: #fff;
+  height: 3px;
+}
+
+form {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+.list-input {
+  background: local;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 5px;
+}
+.list-input:focus {
+  outline: none;
+}
+
+.btn {
+  background: local;
+  border: none;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+.create {
+  margin-right: 3px;
+  padding-top: 3px;
+}
+.delete {
+  font-size: 20px;
+  color: red;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 4px;
+}
+.delete:hover {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.left-projects .active-list {
+  filter: brightness(80%);
+}
+
+/* User Pic */
+.card {
+  width: 270px;
+  height: 70px;
+  margin: 20px 10px;
+}
+
+.card_load {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  float: left;
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+  );
+  border-radius: 50%;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+.card_load_extreme_title {
+  width: 180px;
+  height: 10px;
+  position: relative;
+  float: right;
+  border-radius: 5px;
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+.card_load_extreme_descripion {
+  width: 180px;
+  height: 47px;
+  position: relative;
+  float: right;
+  border-radius: 5px;
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+  );
+  margin-top: 10px;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.title {
+  margin: 30px;
+}
+.task {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  color: white;
+  margin: 0px 30px 4px 30px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.line-throw {
+  text-decoration: 2px line-through;
+}
+
+.task > label {
+  margin: 12px;
+}
+
+/* Cool Check  */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  --clr: rgb(63, 251, 208);
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1em;
+  width: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  animation: pulse 500ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.35em;
+  top: 0.1em;
+  width: 0.2em;
+  height: 0.5em;
+  border: solid black;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #3ffbd070;
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: -20deg;
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px #3ffbd040;
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px #3ffbd010;
+    rotate: 0;
+  }
+}
+
+/* Checkboxes */
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+.task label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.custom-checkbox {
+  --size: 1em;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  margin-right: var(--size);
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+.task:hover .custom-checkbox {
+  transform: scale(1.2);
+  color: blue;
+}
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: blue;
+  border-color: blue;
+  box-shadow: inset 0 0 0px 2px white;
+}
+[type="checkbox"]:checked + label {
+  opacity: 0.9;
+}
+
+.task label::after {
+  content: "";
+  position: absolute;
+  left: 1.6em;
+  right: 0;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 150ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
