@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
-    <!-- <link rel="stylesheet" href="/src/style.css" /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
-    />
-    <script defer src="main.js"></script>
-  </head>
-  <body>
-    <div class="content">
-      <div class="bord">
-        <div class="left">
-          <div class="card">
-            <div class="card_load"></div>
-            <div class="card_load_extreme_title"></div>
-            <div class="card_load_extreme_descripion"></div>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToDo</title>
+        <!-- <link rel="stylesheet" href="/src/style.css" /> -->
+        <link
+            rel="stylesheet"
+            href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+        />
+        <script defer src="main.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="bord">
+                <div class="left">
+                    <div class="card">
+                        <div class="card_load"></div>
+                        <div class="card_load_extreme_title"></div>
+                        <div class="card_load_extreme_descripion"></div>
+                    </div>
 
-          <ul class="left-projects" left-list>
-            <!-- <div class="upper-line"></div>
-            <div class="pined-projects">
-              <div id="myDay" class="left-list-item">
-                <img src="/src/sun.png" alt="" /> My Day
-              </div>
-              <div id="important" class="left-list-item">
-                <img src="/src/important.png" alt="" /> Important
-              </div>
-              <div id="forMe " class="left-list-item">
-                <img src="/src/pearson.png" alt="" /> For Me
-              </div>
+                    <ul class="left-projects" left-list>
+                        <div class="upper-line"></div>
+                        <div class="pined-projects">
+                            <div id="myDay" class="left-list-item">
+                                <img src="/src/sun.png" alt="" /> My Day
+                            </div>
+                            <div id="important" class="left-list-item">
+                                <img src="/src/important.png" alt="" />
+                                Important
+                            </div>
+                            <div id="forMe " class="left-list-item">
+                                <img src="/src/pearson.png" alt="" /> For Me
+                            </div>
+                        </div>
+                        <div class="down-line"></div>
+                        <li
+                            data-list-id="1697404448499"
+                            class="left-list-item"
+                        ></li>
+                    </ul>
+
+                    <div class="left-input">
+                        <form action="" data-new-list-form>
+                            <button
+                                class="input-btn"
+                                aria-label="create new list"
+                            >
+                                +
+                            </button>
+                            <input
+                                type="text"
+                                data-new-list-input
+                                placeholder="+add new project"
+                                class="left-list-item left-list-input"
+                            />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="right" data-list-display-container>
+                    <div class="right-content">
+                        <h1 class="title" data-list-title></h1>
+                        <div class="task-list" data-task></div>
+                        <form action="" data-new-task-form class="right-form">
+                            <button
+                                class="create input-btn"
+                                aria-label="create new task"
+                            >
+                                +
+                            </button>
+                            <input
+                                type="text"
+                                data-new-task-input
+                                placeholder="+add new task"
+                                class="left-list-item right-input"
+                            />
+                            <button
+                                class="clear-tasks-btn btn"
+                                data-clear-tasks-btn
+                            >
+                                Clear complated tasks
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="down-line"></div> -->
-            <li data-list-id="1697404448499" class="left-list-item"></li>
-          </ul>
-
-          <div class="left-input">
-            <form action="" data-new-list-form>
-              <button class="input-btn" aria-label="create new list">+</button>
-              <input
-                type="text"
-                data-new-list-input
-                placeholder="+add new project"
-                class="left-list-item left-list-input"
-              />
-            </form>
-          </div>
         </div>
-
-        <div class="right" data-list-display-container>
-          <div class="right-content">
-            <h1 class="title" data-list-title></h1>
-            <div class="task-list" data-task></div>
-            <form action="" data-new-task-form class="right-form">
-              <button class="create input-btn" aria-label="create new task">
-                +
-              </button>
-              <input
-                type="text"
-                data-new-task-input
-                placeholder="+add new task"
-                class="left-list-item right-input"
-              />
-              <button class="clear-tasks-btn btn" data-clear-tasks-btn>
-                Clear complated tasks
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <template id="task-template">
-      <div class="task">
-        <input type="checkbox" />
-        <label> <span class="custom-checkbox"></span></label>
-        <div class="priorutyAndDate">
-          <select name="select" class="select-priority-color">
-            <!--Supplement an id here instead of using 'name'-->
-            <option value="gray" disabled>Choose priority</option>
-            <option id="red" value="#ff686b">High</option>
-            <option id="yellow" value="#ee9b00">Meddium</option>
-            <option id="green" value="#0a9396   ">Low</option>
-          </select>
-          <input
-            type="datetime-local"
-            name="dueDate"
-            id="dueDate"
-            class="dueDate"
-          />
-        </div>
-      </div>
-    </template>
-  </body>
+        <template id="task-template">
+            <div class="task">
+                <input type="checkbox" />
+                <label> <span class="custom-checkbox"></span></label>
+                <div class="priorutyAndDate">
+                    <select name="select" class="select-priority-color">
+                        <!--Supplement an id here instead of using 'name'-->
+                        <option value="gray" disabled>Choose priority</option>
+                        <option id="red" value="#ff686b">High</option>
+                        <option id="yellow" value="#ee9b00">Meddium</option>
+                        <option id="green" value="#0a9396   ">Low</option>
+                    </select>
+                    <input
+                        type="datetime-local"
+                        name="dueDate"
+                        id="dueDate"
+                        class="dueDate"
+                    />
+                </div>
+            </div>
+        </template>
+    </body>
 </html>
