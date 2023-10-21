@@ -35,6 +35,12 @@ clearTasksBtn.addEventListener("click", () => {
   saveAndRender();
 });
 
+// deleteListButton.addEventListener("click", (e) => {
+//   lists = lists.filter((list) => list.id !== selectedListId);
+//   selectedListId = null;
+//   saveAndRender();
+// });
+
 taskContainer.addEventListener("click", (e) => {
   if (e.target.tagName.toLowerCase() === "input") {
     const selectedList = lists.find((list) => list.id === selectedListId);
@@ -64,12 +70,6 @@ newTaskForm.addEventListener("submit", (e) => {
   newTaskInput.value = null;
   const selectedList = lists.find((list) => list.id === selectedListId);
   selectedList.tasks.push(task);
-  saveAndRender();
-});
-
-deleteListButton.addEventListener("click", (e) => {
-  lists = lists.filter((list) => list.id !== selectedListId);
-  selectedListId = null;
   saveAndRender();
 });
 
@@ -104,7 +104,6 @@ function render() {
   if (selectedListId == null) {
     // listDisplayContainer.style.display = "none";
     clearList(listTitleElement);
-    clearList(newTaskForm);
   } else {
     listTitleElement.innerText = selectedList.name;
   }
@@ -148,14 +147,29 @@ function renderTasks(selectedList) {
 function renderList() {
   lists.forEach((list) => {
     const listElement = document.createElement("li");
+    const listName = document.createElement("div");
+    const trashBox = document.createElement("i");
+    trashBox.classList.add("fi", "fi-rs-trash", "trash");
     listElement.dataset.listId = list.id;
+    trashBox.dataset.listId = list.id;
+    // trashBox.setAttribute("onclick", `deleteListByIcon(${list.id})`);
+    trashBox.onclick = function deleteListByIcon(e) {
+      const target = e.target.dataset.listId;
+      lists = lists.filter((list) => list.id !== target);
+      clearList(listTitleElement);
+      clearList(taskContainer);
+      saveAndRender();
+    };
     listElement.classList.add("left-list-item");
-    listElement.innerText = list.name;
+    listName.innerText = list.name;
     if (list.id === selectedListId) {
       listElement.classList.add("active-list");
     }
+    listElement.appendChild(listName);
+    listElement.appendChild(trashBox);
     leftList.appendChild(listElement);
   });
+  //   trashBox.addEventListener("click", (e) => {});
 }
 
 function saveAndRender() {
