@@ -17,7 +17,7 @@
             <div class="card_load_extreme_descripion"></div>
           </div>
 
-          <div class="left-projects" left-list>
+          <ul class="left-projects" left-list>
             <!-- <div class="upper-line"></div>
             <div class="pined-projects">
               <div id="myDay" class="left-list-item">
@@ -31,33 +31,46 @@
               </div>
             </div>
             <div class="down-line"></div> -->
+            <li data-list-id="1697404448499" class="left-list-item"></li>
+          </ul>
+
+          <div class="buttons">
+            <button class="delete btn" data-delete-list-button>
+              Delete list
+            </button>
+            <button class="clear-tasks-btn btn" data-clear-tasks-btn>
+              Clear complated tasks
+            </button>
           </div>
-          <button class="delete btn" data-delete-list-button>
-            Delete List
-          </button>
-          <form action="" data-new-list-form>
-            <button class="create btn" aria-label="create new list">+</button>
-            <input
-              type="text"
-              data-new-list-input
-              placeholder="add new project"
-              class="list-input"
-            />
-          </form>
+          <div class="left-input">
+            <form action="" data-new-list-form>
+              <button class="input-btn" aria-label="create new list">+</button>
+              <input
+                type="text"
+                data-new-list-input
+                placeholder="+add new project"
+                class="left-list-item left-list-input"
+              />
+            </form>
+          </div>
         </div>
 
         <div class="right" data-list-display-container>
-          <h1 class="title" data-list-title>My Day</h1>
-          <div class="task-list" data-task></div>
-          <form action="" data-new-task-form>
-            <button class="create btn" aria-label="create new task">+</button>
-            <input
-              type="text"
-              data-new-task-input
-              placeholder="add new project"
-              class="list-input"
-            />
-          </form>
+          <div class="right-content">
+            <h1 class="title" data-list-title>My Day</h1>
+            <div class="task-list" data-task></div>
+            <form action="" data-new-task-form>
+              <button class="create input-btn" aria-label="create new task">
+                +
+              </button>
+              <input
+                type="text"
+                data-new-task-input
+                placeholder="+add new task"
+                class="left-list-item right-input"
+              />
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +78,21 @@
       <div class="task">
         <input type="checkbox" />
         <label> <span class="custom-checkbox"></span></label>
+        <div class="priorutyAndDate">
+          <select name="select" class="select-priority-color">
+            <!--Supplement an id here instead of using 'name'-->
+            <option value="gray" disabled>Choose priority</option>
+            <option id="red" value="red">High</option>
+            <option id="yellow" value="yellow">Meddium</option>
+            <option id="green" value="green">Low</option>
+          </select>
+          <input
+            type="datetime-local"
+            name="dueDate"
+            id="dueDate"
+            class="dueDate"
+          />
+        </div>
       </div>
     </template>
   </body>
