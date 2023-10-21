@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
     <!-- <link rel="stylesheet" href="/src/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
     <script defer src="main.js"></script>
   </head>
   <body>
@@ -34,14 +38,6 @@
             <li data-list-id="1697404448499" class="left-list-item"></li>
           </ul>
 
-          <div class="buttons">
-            <button class="delete btn" data-delete-list-button>
-              Delete list
-            </button>
-            <button class="clear-tasks-btn btn" data-clear-tasks-btn>
-              Clear complated tasks
-            </button>
-          </div>
           <div class="left-input">
             <form action="" data-new-list-form>
               <button class="input-btn" aria-label="create new list">+</button>
@@ -57,9 +53,9 @@
 
         <div class="right" data-list-display-container>
           <div class="right-content">
-            <h1 class="title" data-list-title>My Day</h1>
+            <h1 class="title" data-list-title></h1>
             <div class="task-list" data-task></div>
-            <form action="" data-new-task-form>
+            <form action="" data-new-task-form class="right-form">
               <button class="create input-btn" aria-label="create new task">
                 +
               </button>
@@ -69,6 +65,9 @@
                 placeholder="+add new task"
                 class="left-list-item right-input"
               />
+              <button class="clear-tasks-btn btn" data-clear-tasks-btn>
+                Clear complated tasks
+              </button>
             </form>
           </div>
         </div>
@@ -82,9 +81,9 @@
           <select name="select" class="select-priority-color">
             <!--Supplement an id here instead of using 'name'-->
             <option value="gray" disabled>Choose priority</option>
-            <option id="red" value="red">High</option>
-            <option id="yellow" value="yellow">Meddium</option>
-            <option id="green" value="green">Low</option>
+            <option id="red" value="#ff686b">High</option>
+            <option id="yellow" value="#ee9b00">Meddium</option>
+            <option id="green" value="#0a9396   ">Low</option>
           </select>
           <input
             type="datetime-local"
